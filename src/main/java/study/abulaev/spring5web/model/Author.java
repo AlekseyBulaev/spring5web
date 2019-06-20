@@ -10,7 +10,7 @@ public class Author {
 
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
-    private Long ID;
+    private Long id;
     private String firstName;
     private String lastName;
 
@@ -31,12 +31,12 @@ public class Author {
         this.books = books;
     }
 
-    public Long getID() {
-        return ID;
+    public Long getId() {
+        return id;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -68,19 +68,19 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return Objects.equals(ID, author.ID);
+        return Objects.equals(id, author.id);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(ID);
+        return Objects.hash(id);
     }
 
     @Override
     public String toString() {
         return "Author{" +
-                "ID=" + ID +
+                "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", books=" + books +
